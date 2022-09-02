@@ -17,7 +17,9 @@
     </tr>
 
     <c:forEach var="emp" items="${allEmps}">
-        
+        <c:url value="/updateEmployee" var="helo">
+
+        </c:url>
         <tr>
             <td>${emp.name}</td>
             <td>${emp.surname}</td>
