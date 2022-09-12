@@ -17,15 +17,18 @@
     </tr>
 
     <c:forEach var="emp" items="${allEmps}">
-        <c:url value="/updateEmployee" var="helo">
+    <c:url var="updateEmp" value="/updateEmployee">
+        <c:param name="empId" value="${emp.id}"/>
+    </c:url>
 
-        </c:url>
         <tr>
             <td>${emp.name}</td>
             <td>${emp.surname}</td>
             <td>${emp.salary}</td>
             <td>${emp.department}</td>
-            <td><input type="button" value="update" onclick="window.location.href=${hello}"></td>
+            <td>
+                <input type="button" value="update" onclick="window.location.href='${updateEmp}'"/>
+            </td>
         </tr>
     </c:forEach>
 
